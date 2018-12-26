@@ -10,21 +10,28 @@
   <body>
     <div class="calculator_frame">
       <form name="calculator">
-        <input class="textview" name="display">
+        <input class="textview" name="display" disabled>
+        <!--display should be the default value 0 when first loading-->
+        <!--ensure that values never overflow-->
       </form>
       <table>
+          <!--make sure that input sizes/computation results that exceed "999" should be comma-delimited-->
+          <!--input sizes should be limited to "999,999,999"-->
+          <!--computational results larger than "999,999,999" should be shown as scientific notation "1e9" to represent "1,000,000,000"-->
           <td>
             <input type="button" name="allClear" value="AC" onclick="clean()">
           </td>
           <td>
             <input type="button" name="negation" value="+/-" onclick="insert('+/-')">
-            <!--Search up how to do a negation function on javascript calculator-->
+            <!--Search up how to do a negation function on javascript calculator (flips signs based on integer); should be able to chain-->
           </td>
           <td>
             <input type="button" name="percentage" value="%" onclick="insert('%')">
+            <!--Search up how to make percentage sign convert values into decimals (i.e. 98% = 0.98); it also has to be able to chain-->
           </td>
           <td>
             <input type="button" name="division" value="/" onclick="insert('/')">
+            <!--make it so if the user inputs a NaN after the division function, the display shows "error message"-->
           </td>
         </tr>
           <td>
@@ -38,6 +45,7 @@
           </td>
           <td>
             <input type="button" name="multiplication" value="x" onclick="insert('*')">
+            <!--make it so if the user inputs a NaN after the multiplication function, the display shows "error message"-->
           </td>
         <tr>
         </tr>
@@ -52,6 +60,7 @@
           </td>
           <td>
             <input type="button" name="subtraction" value="-" onclick="insert('-')">
+            <!--make it so if the user inputs a NaN after the subtraction function, the display shows "error message"-->
           </td>
         <tr>
         </tr>
@@ -66,6 +75,7 @@
           </td>
           <td>
             <input type="button" name="addition" value="+" onclick="insert('+')">
+            <!--make it so if the user inputs a NaN after the addition function, the display shows "error message"-->
           </td>
         <tr>
         </tr>
@@ -78,6 +88,8 @@
           </td>
           <td>
             <input type="button" name="equal" value="=" onclick="equal()">
+            <!--display should be able to display "undefined" when user divides by 0-->
+            <!--calculator should do the same for other operations that are invalid-->
           </td>
         <tr>
       </table>
