@@ -8,6 +8,7 @@
   </head>
 
   <body>
+    <div class="background_color"></div>
     <div class="calculator_frame">
       <form name="calculator">
         <input class="textview" name="display" disabled>
@@ -19,75 +20,75 @@
           <!--input sizes should be limited to "999,999,999"-->
           <!--computational results larger than "999,999,999" should be shown as scientific notation "1e9" to represent "1,000,000,000"-->
           <td>
-            <input type="button" name="allClear" value="AC" onclick="clean()">
+            <input class="button" type="button" name="allClear" value="AC" onclick="clean()">
           </td>
           <td>
-            <input type="button" name="negation" value="+/-" onclick="insert('+/-')">
+            <input class="button" type="button" name="negation" value="+/-" onclick="insert('+/-')">
             <!--Search up how to do a negation function on javascript calculator (flips signs based on integer); should be able to chain-->
           </td>
           <td>
-            <input type="button" name="percentage" value="%" onclick="insert('%')">
+            <input class="button" type="button" name="percentage" value="%" onclick="insert('%')">
             <!--Search up how to make percentage sign convert values into decimals (i.e. 98% = 0.98); it also has to be able to chain-->
           </td>
           <td>
-            <input type="button" name="division" value="/" onclick="insert('/')">
+            <input class="button" type="button" name="division" value="/" onclick="insert('/')">
             <!--make it so if the user inputs a NaN after the division function, the display shows "error message"-->
           </td>
         </tr>
           <td>
-            <input type="button" name="seven" value="7" onclick="insert(7)">
+            <input class="button" type="button" name="seven" value="7" onclick="insert(7)">
           </td>
           <td>
-            <input type="button" name="eight" value="8" onclick="insert(8)">
+            <input class="button" type="button" name="eight" value="8" onclick="insert(8)">
           </td>
           <td>
-            <input type="button" name="nine" value="9" onclick="insert(9)">
+            <input class="button" type="button" name="nine" value="9" onclick="insert(9)">
           </td>
           <td>
-            <input type="button" name="multiplication" value="x" onclick="insert('*')">
+            <input class="button" type="button" name="multiplication" value="x" onclick="insert('*')">
             <!--make it so if the user inputs a NaN after the multiplication function, the display shows "error message"-->
           </td>
         <tr>
         </tr>
           <td>
-            <input type="button" name="four" value="4" onclick="insert(4)">
+            <input class="button" type="button" name="four" value="4" onclick="insert(4)">
           </td>
           <td>
-            <input type="button" name="five" value="5" onclick="insert(5)">
+            <input class="button" type="button" name="five" value="5" onclick="insert(5)">
           </td>
           <td>
-            <input type="button" name="six" value="6" onclick="insert(6)">
+            <input class="button" type="button" name="six" value="6" onclick="insert(6)">
           </td>
           <td>
-            <input type="button" name="subtraction" value="-" onclick="insert('-')">
+            <input class="button" type="button" name="subtraction" value="-" onclick="insert('-')">
             <!--make it so if the user inputs a NaN after the subtraction function, the display shows "error message"-->
           </td>
         <tr>
         </tr>
           <td>
-            <input type="button" name="one" value="1" onclick="insert(1)">
+            <input class="button" type="button" name="one" value="1" onclick="insert(1)">
           </td>
           <td>
-            <input type="button" name="two" value="2" onclick="insert(2)">
+            <input class="button" type="button" name="two" value="2" onclick="insert(2)">
           </td>
           <td>
-            <input type="button" name="three" value="3" onclick="insert(3)">
+            <input class="button" type="button" name="three" value="3" onclick="insert(3)">
           </td>
           <td>
-            <input type="button" name="addition" value="+" onclick="insert('+')">
+            <input class="button" type="button" name="addition" value="+" onclick="insert('+')">
             <!--make it so if the user inputs a NaN after the addition function, the display shows "error message"-->
           </td>
         <tr>
         </tr>
-          <td colspan=2>
-            <input type="button" name="zero" value="0" onclick="insert(0)">
+          <td>
+            <input class="button" type="button" name="zero" value="0" onclick="insert(0)">
           </td>
           <!-- zero spans two columns-->
           <td>
-            <input type="button" name="decimal" value="." onclick="insert('.')">
+            <input class="button" type="button" name="decimal" value="." onclick="insert('.')">
           </td>
-          <td>
-            <input type="button" name="equal" value="=" onclick="equal()">
+          <td colspan=2>
+            <input class="button" id="equal_button" type="button" name="equal" value="=" onclick="equal()">
             <!--display should be able to display "undefined" when user divides by 0-->
             <!--calculator should do the same for other operations that are invalid-->
           </td>
