@@ -3,22 +3,52 @@
   padding: 0px;
 }
 
-.background_color {
-  /*stuff*/
+body {
+  background-color: #b8e994;
 }
 
-#equal_button {
+#zero_button {
   width: 179px;
-  background: light_gray;
 }
+
+/*possibly add css to make a pressed down button effect*/
 
 .button {
   width: 86.25px;
   height: 50px;
-  font-size: 22px;
+  font-size: 18px;
+  font-weight: bold;
   margin: 2px;
-  color: white;
-  background: gray;
+  color: #636e72;
+  background: #f1f2f6;
+  border: none;
+  border-bottom: 5px solid #60a3bc;
+  border-radius: 10px;
+  transition-duration: 0.4s;
+}
+
+.button:hover {
+  background-color: #ff7979;
+  color: #f1f2f6;
+}
+
+.op_button {
+  width: 86.25px;
+  height: 50px;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 2px;
+  color: #f1f2f6;
+  background: #FEA47F;
+  border: none;
+  border-bottom: 5px solid #60a3bc;
+  border-radius: 10px;
+  transition-duration: 0.4s;
+}
+
+.op_button:hover {
+  background-color: #F97F51;
+  color: #f1f2f6;
 }
 
 .textview {
@@ -27,6 +57,10 @@
   margin: 5px;
   font-size: 25px;
   padding: 5px;
+  background: #60a3bc;
+  border-top: 6px solid #3c6382;
+  border-radius: 4px;
+  color: white;
 }
 
 .calculator_frame {
@@ -34,4 +68,7 @@
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
+  background: #82ccdd;
+  padding: 20px;
+  border-radius: 6px;
 }

@@ -8,7 +8,6 @@
   </head>
 
   <body>
-    <div class="background_color"></div>
     <div class="calculator_frame">
       <form name="calculator">
         <input class="textview" name="display" disabled>
@@ -31,7 +30,7 @@
             <!--Search up how to make percentage sign convert values into decimals (i.e. 98% = 0.98); it also has to be able to chain-->
           </td>
           <td>
-            <input class="button" type="button" name="division" value="/" onclick="insert('/')">
+            <input class="op_button" type="button" name="division" value="/" onclick="insert('/')">
             <!--make it so if the user inputs a NaN after the division function, the display shows "error message"-->
           </td>
         </tr>
@@ -45,7 +44,7 @@
             <input class="button" type="button" name="nine" value="9" onclick="insert(9)">
           </td>
           <td>
-            <input class="button" type="button" name="multiplication" value="x" onclick="insert('*')">
+            <input class="op_button" type="button" name="multiplication" value="x" onclick="insert('*')">
             <!--make it so if the user inputs a NaN after the multiplication function, the display shows "error message"-->
           </td>
         <tr>
@@ -60,7 +59,7 @@
             <input class="button" type="button" name="six" value="6" onclick="insert(6)">
           </td>
           <td>
-            <input class="button" type="button" name="subtraction" value="-" onclick="insert('-')">
+            <input class="op_button" type="button" name="subtraction" value="-" onclick="insert('-')">
             <!--make it so if the user inputs a NaN after the subtraction function, the display shows "error message"-->
           </td>
         <tr>
@@ -75,20 +74,20 @@
             <input class="button" type="button" name="three" value="3" onclick="insert(3)">
           </td>
           <td>
-            <input class="button" type="button" name="addition" value="+" onclick="insert('+')">
+            <input class="op_button" type="button" name="addition" value="+" onclick="insert('+')">
             <!--make it so if the user inputs a NaN after the addition function, the display shows "error message"-->
           </td>
         <tr>
         </tr>
-          <td>
-            <input class="button" type="button" name="zero" value="0" onclick="insert(0)">
+          <td colspan=2>
+            <input id="zero_button" class="button" type="button" name="zero" value="0" onclick="insert(0)">
           </td>
           <!-- zero spans two columns-->
           <td>
             <input class="button" type="button" name="decimal" value="." onclick="insert('.')">
           </td>
-          <td colspan=2>
-            <input class="button" id="equal_button" type="button" name="equal" value="=" onclick="equal()">
+          <td>
+            <input class="op_button" type="button" name="equal" value="=" onclick="equal()">
             <!--display should be able to display "undefined" when user divides by 0-->
             <!--calculator should do the same for other operations that are invalid-->
           </td>
