@@ -1,5 +1,5 @@
 function insert(num) {
-    document.calculator.display.value = document.calculator.display.value+num;
+    document.calculator.display.value = document.calculator.display.value + num;
 }
 
 function equal() {

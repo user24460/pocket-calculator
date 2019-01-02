@@ -15,6 +15,7 @@
         <!--ensure that values never overflow-->
       </form>
       <table>
+      </tr>
           <!--make sure that input sizes/computation results that exceed "999" should be comma-delimited-->
           <!--input sizes should be limited to "999,999,999"-->
           <!--computational results larger than "999,999,999" should be shown as scientific notation "1e9" to represent "1,000,000,000"-->
@@ -33,7 +34,7 @@
             <input class="op_button" type="button" name="division" value="/" onclick="insert('/')">
             <!--make it so if the user inputs a NaN after the division function, the display shows "error message"-->
           </td>
-        </tr>
+        <tr>
           <td>
             <input class="button" type="button" name="seven" value="7" onclick="insert(7)">
           </td>
@@ -47,8 +48,8 @@
             <input class="op_button" type="button" name="multiplication" value="x" onclick="insert('*')">
             <!--make it so if the user inputs a NaN after the multiplication function, the display shows "error message"-->
           </td>
-        <tr>
         </tr>
+        <tr>
           <td>
             <input class="button" type="button" name="four" value="4" onclick="insert(4)">
           </td>
@@ -62,8 +63,8 @@
             <input class="op_button" type="button" name="subtraction" value="-" onclick="insert('-')">
             <!--make it so if the user inputs a NaN after the subtraction function, the display shows "error message"-->
           </td>
-        <tr>
         </tr>
+        <tr>
           <td>
             <input class="button" type="button" name="one" value="1" onclick="insert(1)">
           </td>
@@ -77,8 +78,8 @@
             <input class="op_button" type="button" name="addition" value="+" onclick="insert('+')">
             <!--make it so if the user inputs a NaN after the addition function, the display shows "error message"-->
           </td>
-        <tr>
         </tr>
+        <tr>
           <td colspan=2>
             <input id="zero_button" class="button" type="button" name="zero" value="0" onclick="insert(0)">
           </td>
@@ -91,7 +92,7 @@
             <!--display should be able to display "undefined" when user divides by 0-->
             <!--calculator should do the same for other operations that are invalid-->
           </td>
-        <tr>
+        </tr>
       </table>
     </div>
   </body>
