@@ -16,7 +16,7 @@ body {
   height: 45px;
   font-size: 18px;
   font-weight: bold;
-  margin: 7px;
+  margin: 5.5px;
   color: #636e72;
   background: #f1f2f6;
   border: none;
@@ -42,7 +42,7 @@ body {
   height: 45px;
   font-size: 18px;
   font-weight: bold;
-  margin: 7px;
+  margin: 5.5px;
   color: #f1f2f6;
   background: #FEA47F;
   border: none;
@@ -64,7 +64,7 @@ body {
 }
 
 .textview {
-  width: 383px;
+  width: 376px;
   height: 40px;
   margin: 5.5px;
   font-size: 25px;

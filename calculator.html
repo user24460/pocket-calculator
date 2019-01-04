@@ -20,14 +20,14 @@
           <!--input sizes should be limited to "999,999,999"-->
           <!--computational results larger than "999,999,999" should be shown as scientific notation "1e9" to represent "1,000,000,000"-->
           <td>
-            <input class="button" type="button" name="allClear" value="AC" onclick="clean()">
+            <input class="button" type="button" name="allClear" value="AC" onclick="clean()" onclick="testing()">
           </td>
           <td>
-            <input class="button" type="button" name="negation" value="+/-" onclick="insert('+/-')">
+            <input class="button" type="button" name="negation" value="+/-" onclick="negation()">
             <!--Search up how to do a negation function on javascript calculator (flips signs based on integer); should be able to chain-->
           </td>
           <td>
-            <input class="button" type="button" name="percentage" value="%" onclick="insert('%')">
+            <input class="button" type="button" name="percentage" value="%" onclick="percentage()">
             <!--Search up how to make percentage sign convert values into decimals (i.e. 98% = 0.98); it also has to be able to chain-->
           </td>
           <td>
