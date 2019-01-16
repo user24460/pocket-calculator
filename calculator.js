@@ -1,35 +1,35 @@
-var evalStr = ''; var lastNum = true; var lastSym = false; var lastEql = false;
+var evaluateString = ''; var lastNumber = true; var lastSymbol = false; var lastEqual = false;
 
 function insert(num) {
-  if (lastEql) {
-    clean(); lastEql = false;
+  if (lastEqual) {
+    clean(); lastEqual = false;
   }
 
-  if (lastNum) {
+  if (lastNumber) {
     document.calculator.display.value = (document.calculator.display.value + num);
-    lastSym = true;
+    lastSymbol = true;
   } else {
     document.calculator.display.value = (num);
-    lastSym = true; lastNum = true;
+    lastSymbol = true; lastNumber = true;
   }
-  evalStr = evalStr + num;
+  evaluateString = evaluateString + num;
 }
 
-function parseSym(sym) {
-  if (lastSym) {
+function parseSymbol(sym) {
+  if (lastSymbol) {
     document.calculator.display.value = (sym);
-    lastSym = false; lastNum = false; lastEql = false; evalStr = evalStr + sym;
+    lastSymbol = false; lastNumber = false; lastEqual = false; evaluateString = evaluateString + sym;
   }
 }
 
 function equal() {
-  document.calculator.display.value = eval(evalStr);
-  evalStr = eval(evalStr).toLocaleString("en"); lastNum = false; lastEql = true;
+  document.calculator.display.value = eval(evaluateString);
+  evaluateString = eval(evaluateString).toLocaleString("en"); lastNumber = false; lastEqual = true;
 }
 
 function clean() {
   document.calculator.display.value = ' ';
-  evalStr = ''; lastNum = true; lastSym = false;
+  evaluateString = ''; lastNumber = true; lastSymbol = false;
 }
 
 function negation() {
