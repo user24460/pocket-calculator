@@ -9,30 +9,24 @@
 
   <body onload = "clean()">
     <div class="calculator_frame">
+
       <form name="calculator">
         <input class="textview" name="display" disabled>
-        <!--display should be the default value 0 when first loading-->
-        <!--ensure that values never overflow-->
       </form>
+
       <table>
       </tr>
-          <!--make sure that input sizes/computation results that exceed "999" should be comma-delimited-->
-          <!--input sizes should be limited to "999,999,999"-->
-          <!--computational results larger than "999,999,999" should be shown as scientific notation "1e9" to represent "1,000,000,000"-->
           <td>
             <input id="buttonAC" class="button" type="button" name="allClear" value="AC" onclick="clean()">
           </td>
           <td>
             <input id="buttonNegation" class="button" type="button" name="negation" value="+/-" onclick="negation('+/-')">
-            <!--Search up how to do a negation function on javascript calculator (flips signs based on integer); should be able to chain-->
           </td>
           <td>
             <input id="buttonPercentage" class="button" type="button" name="percentage" value="%" onclick="percentage('%')">
-            <!--Search up how to make percentage sign convert values into decimals (i.e. 98% = 0.98); it also has to be able to chain-->
           </td>
           <td>
-            <input id="buttonOperation" class="op_button" type="button" name="division" value="/" onclick="insert('/'); clearOnOp()">
-            <!--make it so if the user inputs a NaN after the division function, the display shows "error message"-->
+            <input id="buttonOperation" class="op_button" type="button" name="division" value="/" onclick="insert('/'); clearOperation()">
           </td>
         <tr>
           <td>
@@ -45,8 +39,7 @@
             <input id="buttonNine" class="button" type="button" name="nine" value="9" onclick="insert(9)">
           </td>
           <td>
-            <input id="buttonOperation" class="op_button" type="button" name="multiplication" value="x" onclick="insert('*'); clearOnOp()">
-            <!--make it so if the user inputs a NaN after the multiplication function, the display shows "error message"-->
+            <input id="buttonOperation" class="op_button" type="button" name="multiplication" value="x" onclick="insert('*'); clearOperation()">
           </td>
         </tr>
         <tr>
@@ -60,8 +53,7 @@
             <input id="buttonSix" class="button" type="button" name="six" value="6" onclick="insert(6)">
           </td>
           <td>
-            <input id="buttonOperation" class="op_button" type="button" name="subtraction" value="-" onclick="insert('-'); clearOnOp()">
-            <!--make it so if the user inputs a NaN after the subtraction function, the display shows "error message"-->
+            <input id="buttonOperation" class="op_button" type="button" name="subtraction" value="-" onclick="insert('-'); clearOperation()">
           </td>
         </tr>
         <tr>
@@ -75,25 +67,22 @@
             <input id="buttonThree" class="button" type="button" name="three" value="3" onclick="insert(3)">
           </td>
           <td>
-            <input id="buttonOperation" class="op_button" type="button" name="addition" value="+" onclick="insert('+'); clearOnOp()">
-            <!--make it so if the user inputs a NaN after the addition function, the display shows "error message"-->
+            <input id="buttonOperation" class="op_button" type="button" name="addition" value="+" onclick="insert('+'); clearOperation()">
           </td>
         </tr>
         <tr>
           <td colspan=2>
             <input id="buttonZero" class="button" type="button" name="zero" value="0" onclick="insert(0)">
           </td>
-          <!-- zero spans two columns-->
           <td>
-            <input id="buttonDecimal" class="button" type="button" name="decimal" value="." onclick="decimalInsert('.')">
+            <input id="buttonDecimal" class="button" type="button" name="decimal" value="." onclick="decimal('.')">
           </td>
           <td>
             <input id="buttonEqual" class="op_button" type="button" name="equal" value="=" onclick="equal()">
-            <!--display should be able to display "undefined" when user divides by 0-->
-            <!--calculator should do the same for other operations that are invalid-->
           </td>
         </tr>
       </table>
+
     </div>
   </body>
 
